@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroForte | Compras</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>AgroForte: Futuro Sustentável, Produção e Meio Ambiente</span>
+    <div class="accessibility">
+      <button class="icon-button" onclick="alternarTema()" aria-label="Alternar modo escuro">🌙</button>
+      <button class="icon-button" onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+      <button class="icon-button" onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">🌱 AgroForte</a>
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="producao.html">Produção</a>
+      <a href="rastreamento.html">Rastreamento</a>
+      <a href="simulador.html">Simulador</a>
+      <a href="impacto.html">Impacto</a>
+      <a class="active" href="compras.html">Compras</a>
+      <a href="jogo.html">AgroGame</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero market-hero">
+      <div>
+        <span class="eyebrow">Marketplace fictício</span>
+        <h1>Mercado AgroForte</h1>
+        <p>Escolha produtos agrícolas, defina quantidades e veja um resumo de pedido organizado.</p>
+      </div>
+    </section>
+
+    <section class="section market-layout">
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="IMG/plantacoes-agricolas.jpg" alt="Milho">
+          <h3>🌽 Milho</h3>
+          <p>Grãos selecionados para alimentação e processamento.</p>
+          <strong>R$ 5,00 / kg</strong>
+          <input type="number" min="0" value="0" id="qtd-milho" aria-label="Quantidade de milho">
+          <button class="button primary" onclick="adicionarCompra('Milho', 5, 'qtd-milho')">Comprar</button>
+        </article>
+        <article class="product-card">
+          <img src="IMG/lavoura-moderna.jpg" alt="Soja">
+          <h3>🌱 Soja</h3>
+          <p>Produto versátil, usado na indústria alimentícia e na produção de óleo.</p>
+          <strong>R$ 7,00 / kg</strong>
+          <input type="number" min="0" value="0" id="qtd-soja" aria-label="Quantidade de soja">
+          <button class="button primary" onclick="adicionarCompra('Soja', 7, 'qtd-soja')">Comprar</button>
+        </article>
+        <article class="product-card">
+          <img src="IMG/agricultura.jpg" alt="Trigo">
+          <h3>🌾 Trigo</h3>
+          <p>Base para farinhas, massas, pães e diversos alimentos do dia a dia.</p>
+          <strong>R$ 4,00 / kg</strong>
+          <input type="number" min="0" value="0" id="qtd-trigo" aria-label="Quantidade de trigo">
+          <button class="button primary" onclick="adicionarCompra('Trigo', 4, 'qtd-trigo')">Comprar</button>
+        </article>
+      </div>
+
+      <aside class="order-summary">
+        <span class="eyebrow">Resumo</span>
+        <h2>Pedido</h2>
+        <div class="wallet-card">
+          <span>💰 Saldo disponível</span>
+          <strong id="saldoCarteira">R$ 0,00</strong>
+          <small>Ganhe dinheiro finalizando o AgroGame.</small>
+        </div>
+        <div id="resultadoCompra" class="summary-list">
+          <p>Nenhum produto selecionado.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AgroForte - Comercialização simulada e educativa.</p>
+  </footer>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>

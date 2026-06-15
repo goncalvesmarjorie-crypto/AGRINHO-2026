@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroForte | Simulador</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>AgroForte: Futuro Sustentável, Produção e Meio Ambiente</span>
+    <div class="accessibility">
+      <button class="icon-button" onclick="alternarTema()" aria-label="Alternar modo escuro">🌙</button>
+      <button class="icon-button" onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+      <button class="icon-button" onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">🌱 AgroForte</a>
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="producao.html">Produção</a>
+      <a href="rastreamento.html">Rastreamento</a>
+      <a class="active" href="simulador.html">Simulador</a>
+      <a href="impacto.html">Impacto</a>
+      <a href="compras.html">Compras</a>
+      <a href="jogo.html">AgroGame</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero simulator-hero">
+      <div>
+        <span class="eyebrow">Planejamento rural</span>
+        <h1>Simulador agrícola moderno</h1>
+        <p>Escolha a cultura, informe hectares e investimento para visualizar resultados estimados.</p>
+      </div>
+    </section>
+
+    <section class="section simulator-layout">
+      <form class="tool-panel" onsubmit="calcularProducao(event)">
+        <label for="cultura">Cultura</label>
+        <select id="cultura">
+          <option value="milho">Milho</option>
+          <option value="soja">Soja</option>
+          <option value="trigo">Trigo</option>
+        </select>
+
+        <label for="hectares">Hectares</label>
+        <input type="number" id="hectares" min="1" placeholder="Ex.: 20">
+
+        <label for="investimento">Investimento (R$)</label>
+        <input type="number" id="investimento" min="1" placeholder="Ex.: 50000">
+
+        <button class="button primary" type="submit">Calcular produção</button>
+      </form>
+
+      <div id="resultado" class="result-grid">
+        <article class="result-card">
+          <span>📈</span>
+          <h3>Produção estimada</h3>
+          <p>Informe os dados para simular.</p>
+        </article>
+        <article class="result-card">
+          <span>💰</span>
+          <h3>Lucro estimado</h3>
+          <p>Os valores aparecerão aqui.</p>
+        </article>
+        <article class="result-card">
+          <span>💧</span>
+          <h3>Consumo de água</h3>
+          <p>Comparação por cultura.</p>
+        </article>
+        <article class="result-card">
+          <span>🌎</span>
+          <h3>Impacto ambiental</h3>
+          <p>Estimativa educativa.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AgroForte - Simulação educativa para decisões sustentáveis.</p>
+  </footer>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroForte | AgroGame</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>AgroForte: Futuro Sustentável, Produção e Meio Ambiente</span>
+    <div class="accessibility">
+      <button class="icon-button" onclick="alternarTema()" aria-label="Alternar modo escuro">🌙</button>
+      <button class="icon-button" onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+      <button class="icon-button" onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">🌱 AgroForte</a>
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="producao.html">Produção</a>
+      <a href="rastreamento.html">Rastreamento</a>
+      <a href="simulador.html">Simulador</a>
+      <a href="impacto.html">Impacto</a>
+      <a href="compras.html">Compras</a>
+      <a class="active" href="jogo.html">AgroGame</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero game-hero">
+      <div>
+        <span class="eyebrow">Mini game interativo</span>
+        <h1>AgroGame: plante, colha e transporte</h1>
+        <p>Clique no campo para plantar. Depois use a colheitadeira com o mouse e conclua a entrega da produção.</p>
+      </div>
+    </section>
+
+    <section class="section game-layout">
+      <div class="game-hud">
+        <div><strong>Fase:</strong> <span id="faseJogo">1 - Plantio</span></div>
+        <div><strong>Plantado:</strong> <span id="plantadoJogo">0</span></div>
+        <div><strong>Colhido:</strong> <span id="colhidoJogo">0</span></div>
+        <div><strong>Pontos:</strong> <span id="pontosJogo">0</span></div>
+        <div><strong>Dinheiro:</strong> <span id="dinheiroJogo">R$ 0,00</span></div>
+        <div><strong>Carteira:</strong> <span id="saldoCarteira">R$ 0,00</span></div>
+        <button class="button secondary" onclick="reiniciarJogo()">Reiniciar</button>
+      </div>
+
+      <div id="campoJogo" class="game-field" aria-label="Campo do AgroGame">
+        <div id="colheitadeira" class="harvester">🚜</div>
+        <div id="caminhao" class="truck">🚚</div>
+        <div id="mensagemJogo" class="game-message">Clique no campo para plantar 12 mudas.</div>
+      </div>
+
+      <div id="fimJogo" class="final-screen">
+        <h2>🚜 Produção concluída</h2>
+        <div class="final-grid">
+          <span>🌱 Plantado</span>
+          <span>🌾 Colhido</span>
+          <span>🚚 Transportado</span>
+          <span>🏪 Vendido</span>
+        </div>
+        <p id="pontuacaoFinal"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AgroForte - Aprender jogando sobre a jornada agrícola.</p>
+  </footer>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>

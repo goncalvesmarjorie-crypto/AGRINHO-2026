@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroForte | Rastreamento</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>AgroForte: Futuro Sustentável, Produção e Meio Ambiente</span>
+    <div class="accessibility">
+      <button class="icon-button" onclick="alternarTema()" aria-label="Alternar modo escuro">🌙</button>
+      <button class="icon-button" onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+      <button class="icon-button" onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">🌱 AgroForte</a>
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="producao.html">Produção</a>
+      <a class="active" href="rastreamento.html">Rastreamento</a>
+      <a href="simulador.html">Simulador</a>
+      <a href="impacto.html">Impacto</a>
+      <a href="compras.html">Compras</a>
+      <a href="jogo.html">AgroGame</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero tracking-hero">
+      <div>
+        <span class="eyebrow">Logística agrícola</span>
+        <h1>Rastreamento visual da carga</h1>
+        <p>Acompanhe em tempo real a jornada de uma carga agrícola, com status, rota, eventos e controle de qualidade.</p>
+      </div>
+    </section>
+
+    <section class="section tracking-dashboard">
+      <div class="tracker-summary">
+        <div>
+          <span class="eyebrow">Painel logístico AGF-2046</span>
+          <h2 id="statusCarga">Saindo de Cascavel</h2>
+          <p id="statusDetalhe">Produto carregado e documentação conferida.</p>
+        </div>
+        <div class="tracker-actions">
+          <span id="ultimaAtualizacao">Atualizado agora</span>
+          <button class="button primary" onclick="atualizarRota()">Atualizar rota</button>
+        </div>
+      </div>
+
+      <div class="tracking-shell">
+        <section class="tracking-map-card">
+          <div class="map-header">
+            <div>
+              <span class="eyebrow">Rota monitorada</span>
+              <h3>Cascavel até Umuarama</h3>
+            </div>
+            <strong id="percentualRota">0%</strong>
+          </div>
+
+          <div class="route-map">
+            <div class="map-road"></div>
+            <div id="truckMarker" class="truck-marker">🚚</div>
+            <div class="map-point active" style="--x: 8%; --y: 72%;">
+              <span>1</span>
+              <strong>Cascavel</strong>
+            </div>
+            <div class="map-point" style="--x: 38%; --y: 44%;">
+              <span>2</span>
+              <strong>Campo Mourão</strong>
+            </div>
+            <div class="map-point" style="--x: 64%; --y: 58%;">
+              <span>3</span>
+              <strong>Goioerê</strong>
+            </div>
+            <div class="map-point" style="--x: 88%; --y: 28%;">
+              <span>4</span>
+              <strong>Umuarama</strong>
+            </div>
+          </div>
+
+          <div class="progress-track">
+            <div id="routeProgress" class="progress-fill"></div>
+          </div>
+
+          <div class="route-steps" id="routeSteps">
+            <div class="route-step active">
+              <span>1</span>
+              <strong>Cascavel</strong>
+              <small>Origem da carga</small>
+            </div>
+            <div class="route-step">
+              <span>2</span>
+              <strong>Campo Mourão</strong>
+              <small>Conferência</small>
+            </div>
+            <div class="route-step">
+              <span>3</span>
+              <strong>Goioerê</strong>
+              <small>Controle de rota</small>
+            </div>
+            <div class="route-step">
+              <span>4</span>
+              <strong>Umuarama</strong>
+              <small>Entrega final</small>
+            </div>
+          </div>
+        </section>
+
+        <aside class="shipment-card">
+          <span class="eyebrow">Dados da carga</span>
+          <h3>Milho selecionado</h3>
+          <div class="shipment-code">AGF-2046</div>
+          <ul>
+            <li><strong>Origem:</strong> Cascavel - PR</li>
+            <li><strong>Destino:</strong> Umuarama - PR</li>
+            <li><strong>Peso:</strong> 18.500 kg</li>
+            <li><strong>Lacre:</strong> Verificado</li>
+            <li><strong>Motorista:</strong> Equipe AgroForte</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="logistics-grid tracking-metrics">
+        <article class="status-card">
+          <span>🚚</span>
+          <h3>Status da carga</h3>
+          <p id="cargoStatus">Em rota inicial</p>
+        </article>
+        <article class="status-card">
+          <span>📍</span>
+          <h3>Local atual</h3>
+          <p id="localAtual">Cascavel - PR</p>
+        </article>
+        <article class="status-card">
+          <span>🛣️</span>
+          <h3>Distância restante</h3>
+          <p id="distanciaRestante">286 km restantes</p>
+        </article>
+        <article class="status-card">
+          <span>🕒</span>
+          <h3>Previsão</h3>
+          <p id="deliveryTime">Chegada prevista em 6 horas.</p>
+        </article>
+      </div>
+
+      <div class="tracking-details-grid">
+        <section class="event-panel">
+          <span class="eyebrow">Histórico de eventos</span>
+          <h3>Timeline da viagem</h3>
+          <div id="eventLog" class="event-log"></div>
+        </section>
+
+        <section class="event-panel">
+          <span class="eyebrow">Controle de qualidade</span>
+          <h3>Checklist da carga</h3>
+          <div class="checklist">
+            <div><span>✓</span> Nota fiscal conferida</div>
+            <div><span>✓</span> Produto seco e protegido</div>
+            <div><span>✓</span> Lacre preservado</div>
+            <div><span>✓</span> Transporte monitorado</div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AgroForte - Rastreabilidade do campo ao consumidor.</p>
+  </footer>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>

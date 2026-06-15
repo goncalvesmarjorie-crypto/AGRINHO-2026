@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroForte | Produção</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>AgroForte: Futuro Sustentável, Produção e Meio Ambiente</span>
+    <div class="accessibility">
+      <button class="icon-button" onclick="alternarTema()" aria-label="Alternar modo escuro">🌙</button>
+      <button class="icon-button" onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+      <button class="icon-button" onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">🌱 AgroForte</a>
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a class="active" href="producao.html">Produção</a>
+      <a href="rastreamento.html">Rastreamento</a>
+      <a href="simulador.html">Simulador</a>
+      <a href="impacto.html">Impacto</a>
+      <a href="compras.html">Compras</a>
+      <a href="jogo.html">AgroGame</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero production-hero">
+      <div>
+        <span class="eyebrow">Ciclo produtivo</span>
+        <h1>Produção agrícola inteligente</h1>
+        <p>Conheça as etapas que transformam planejamento, solo, água e tecnologia em alimentos para a população.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <span class="eyebrow">Etapas do campo</span>
+        <h2>Da preparação do solo à distribuição</h2>
+      </div>
+
+      <div class="timeline-cards">
+        <article class="process-card">
+          <img src="IMG/plantacoes-agricolas.jpg" alt="Solo agrícola preparado">
+          <div>
+            <span class="step-number">01</span>
+            <h3>🌱 Preparação do solo</h3>
+            <p>Correção, adubação e análise do terreno criam a base para uma lavoura mais saudável e produtiva.</p>
+            <strong>Curiosidade:</strong> sensores podem medir umidade e nutrientes antes mesmo do plantio.
+          </div>
+        </article>
+        <article class="process-card">
+          <img src="IMG/lavoura-moderna.jpg" alt="Plantio em lavoura moderna">
+          <div>
+            <span class="step-number">02</span>
+            <h3>🌾 Plantio</h3>
+            <p>Sementes de qualidade são distribuídas com espaçamento adequado para aproveitar melhor luz, água e nutrientes.</p>
+            <strong>Curiosidade:</strong> máquinas modernas reduzem falhas e desperdício de sementes.
+          </div>
+        </article>
+        <article class="process-card">
+          <img src="IMG/sustentabilidade.jpg" alt="Irrigação e cuidado ambiental">
+          <div>
+            <span class="step-number">03</span>
+            <h3>💧 Irrigação</h3>
+            <p>Sistemas inteligentes entregam água na quantidade certa, evitando perdas e protegendo recursos naturais.</p>
+            <strong>Curiosidade:</strong> gotejamento pode economizar água em comparação com métodos tradicionais.
+          </div>
+        </article>
+        <article class="process-card">
+          <img src="IMG/agricultura.jpg" alt="Colheita agrícola">
+          <div>
+            <span class="step-number">04</span>
+            <h3>🚜 Colheita</h3>
+            <p>Colheitadeiras retiram a produção no ponto ideal, preservando qualidade e diminuindo perdas no campo.</p>
+            <strong>Curiosidade:</strong> mapas de produtividade mostram quais áreas renderam mais.
+          </div>
+        </article>
+        <article class="process-card">
+          <img src="IMG/caminhao-transporte.jpg" alt="Caminhão transportando produção">
+          <div>
+            <span class="step-number">05</span>
+            <h3>📦 Distribuição</h3>
+            <p>A produção segue para armazenamento, processamento, mercados e consumidores com controle de rota e qualidade.</p>
+            <strong>Curiosidade:</strong> rastreabilidade aumenta confiança entre produtor, comprador e consumidor.
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AgroForte - Produção com tecnologia e responsabilidade.</p>
+  </footer>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>

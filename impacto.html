@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroForte | Impacto</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>AgroForte: Futuro Sustentável, Produção e Meio Ambiente</span>
+    <div class="accessibility">
+      <button class="icon-button" onclick="alternarTema()" aria-label="Alternar modo escuro">🌙</button>
+      <button class="icon-button" onclick="aumentarFonte()" aria-label="Aumentar fonte">A+</button>
+      <button class="icon-button" onclick="diminuirFonte()" aria-label="Diminuir fonte">A-</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">🌱 AgroForte</a>
+    <nav class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="producao.html">Produção</a>
+      <a href="rastreamento.html">Rastreamento</a>
+      <a href="simulador.html">Simulador</a>
+      <a class="active" href="impacto.html">Impacto</a>
+      <a href="compras.html">Compras</a>
+      <a href="jogo.html">AgroGame</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero impact-hero">
+      <div>
+        <span class="eyebrow">Sustentabilidade</span>
+        <h1>Impacto ambiental positivo</h1>
+        <p>Conheça práticas que unem produtividade, preservação e uso inteligente dos recursos naturais.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <span class="eyebrow">Blocos interativos</span>
+        <h2>Práticas que reduzem impactos e fortalecem o campo</h2>
+        <p>Cada tema mostra uma ação importante para tornar a produção agrícola mais eficiente, responsável e preparada para o futuro.</p>
+      </div>
+
+      <div class="impact-grid expanded">
+        <article class="impact-card">
+          <span class="card-icon">🌳</span>
+          <h3>Preservação Ambiental</h3>
+          <p>
+            A agricultura sustentável busca produzir alimentos preservando os recursos naturais para as futuras gerações. Entre as principais ações estão a proteção das matas ciliares, a recuperação de áreas degradadas e a conservação da biodiversidade. Essas práticas ajudam a reduzir a erosão do solo, proteger nascentes e manter o equilíbrio dos ecossistemas. A conservação do solo e da água é fundamental para garantir produtividade e sustentabilidade no campo.
+          </p>
+          <button class="button secondary" onclick="toggleCuriosidade(this)">Curiosidade</button>
+          <p class="curiosity">As matas ciliares funcionam como uma barreira natural que protege rios e nascentes, reduzindo a erosão e melhorando a qualidade da água.</p>
+        </article>
+
+        <article class="impact-card">
+          <span class="card-icon">💧</span>
+          <h3>Uso Inteligente da Água</h3>
+          <p>
+            A água é um dos recursos mais importantes para a agricultura. Atualmente, diversas tecnologias permitem utilizar a água de forma racional, reduzindo desperdícios e aumentando a eficiência da produção. Sistemas modernos de irrigação distribuem apenas a quantidade necessária para cada cultura, contribuindo para a sustentabilidade e para a segurança hídrica.
+          </p>
+          <button class="button secondary" onclick="toggleCuriosidade(this)">Curiosidade</button>
+          <p class="curiosity">Técnicas adequadas de manejo do solo aumentam a infiltração da água e ajudam a recarregar aquíferos subterrâneos, ampliando a disponibilidade hídrica para toda a região.</p>
+        </article>
+
+        <article class="impact-card">
+          <span class="card-icon">🚜</span>
+          <h3>Agricultura de Precisão</h3>
+          <p>
+            A agricultura de precisão utiliza tecnologias como drones, sensores, GPS e análise de dados para monitorar lavouras em tempo real. Isso permite identificar problemas rapidamente, aplicar insumos apenas onde necessário e aumentar a produtividade com menor impacto ambiental. Essa tecnologia representa um dos maiores avanços do agronegócio moderno.
+          </p>
+          <button class="button secondary" onclick="toggleCuriosidade(this)">Curiosidade</button>
+          <p class="curiosity">Drones agrícolas conseguem identificar focos de pragas e doenças antes mesmo que sejam visíveis a olho nu, permitindo ações mais rápidas e eficientes.</p>
+        </article>
+
+        <article class="impact-card">
+          <span class="card-icon">♻️</span>
+          <h3>Sustentabilidade no Agro</h3>
+          <p>
+            Produzir mais alimentos utilizando menos recursos é um dos grandes desafios do século XXI. A sustentabilidade no agro envolve práticas que equilibram crescimento econômico, responsabilidade ambiental e bem-estar social. O uso consciente dos recursos naturais garante que a produção agrícola continue atendendo às necessidades da população sem comprometer o futuro.
+          </p>
+          <button class="button secondary" onclick="toggleCuriosidade(this)">Curiosidade</button>
+          <p class="curiosity">Projetos de manejo sustentável do solo e da água podem aumentar a produtividade agrícola enquanto reduzem impactos ambientais e preservam recursos naturais.</p>
+        </article>
+
+        <article class="impact-card">
+          <span class="card-icon">🌎</span>
+          <h3>Tecnologia e Futuro</h3>
+          <p>
+            O futuro da agricultura está cada vez mais ligado à inovação. Inteligência artificial, sensores inteligentes, automação e análise de dados ajudam produtores a tomar decisões mais eficientes e sustentáveis. Essas tecnologias tornam possível produzir alimentos em maior quantidade, com mais qualidade e menor impacto ambiental.
+          </p>
+          <button class="button secondary" onclick="toggleCuriosidade(this)">Curiosidade</button>
+          <p class="curiosity">Muitas fazendas modernas já utilizam sensores conectados à internet que monitoram temperatura, umidade e condições do solo em tempo real para otimizar a produção.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AgroForte - Meio ambiente como parte da produção.</p>
+  </footer>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>
