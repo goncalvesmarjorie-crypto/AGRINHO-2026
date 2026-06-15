@@ -1,4 +1,4 @@
-# 🌱 AgroRota
+# AgroRota
 
 ## AgroForte: Futuro Sustentável, Produção e Meio Ambiente
 
@@ -20,31 +20,31 @@ A ideia do projeto é apresentar, de maneira simples e interativa, o caminho que
 
 ## Páginas do Site
 
-### 🏠 Início
+### Início
 
 Apresenta o tema do projeto e uma visão geral sobre a relação entre produção agrícola, sustentabilidade e tecnologia.
 
-### 🌱 Produção
+### Produção
 
 Mostra as principais etapas da produção agrícola, desde a preparação do solo até a colheita dos alimentos.
 
-### 🚚 Rastreamento
+### Rastreamento
 
 Permite acompanhar o trajeto de uma carga agrícola, simulando o transporte entre cidades do Paraná.
 
-### 📊 Simulador
+### Simulador
 
 O usuário pode realizar simulações de produção agrícola e visualizar resultados relacionados ao cultivo.
 
-### 🌎 Impacto Ambiental
+### Impacto Ambiental
 
 Apresenta informações sobre sustentabilidade, preservação ambiental, economia de água e novas tecnologias utilizadas no campo.
 
-### 🛒 Compras
+### Compras
 
 Simula a compra de produtos agrícolas, aproximando o usuário da realidade do mercado.
 
-### 🎮 AgroGame
+### AgroGame
 
 Mini jogo educativo que representa etapas da produção agrícola de forma divertida e interativa.
 
